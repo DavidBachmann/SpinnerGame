@@ -11,8 +11,7 @@ Preload.prototype = {
 
     this.load.onLoadComplete.addOnce(this.onLoadComplete, this);
     this.load.setPreloadSprite(this.asset);
-    this.load.image('yeoman', 'assets/yeoman-logo.png');
-    this.load.image('hero', 'assets/tempdude.png');
+    this.load.atlas('hero', 'assets/hero.png', 'assets/hero.json');
     this.load.image('background', 'assets/WOF-background.png');
     this.load.image('wheelCenter', 'assets/WOF-center.png');
     this.load.image('wheelColors', 'assets/WOF-colors.png');
