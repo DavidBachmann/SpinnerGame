@@ -1,0 +1,44 @@
+{"frames": {
+
+"WOF-spin-btn-opague.png":
+{
+	"frame": {"x":1,"y":1,"w":232,"h":79},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":232,"h":79},
+	"sourceSize": {"w":232,"h":79}
+},
+"WOF-spin-btn.png":
+{
+	"frame": {"x":235,"y":1,"w":232,"h":79},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":232,"h":79},
+	"sourceSize": {"w":232,"h":79}
+},
+"WOF-stop-btn-opague.png":
+{
+	"frame": {"x":469,"y":1,"w":232,"h":79},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":232,"h":79},
+	"sourceSize": {"w":232,"h":79}
+},
+"WOF-stop-btn.png":
+{
+	"frame": {"x":703,"y":1,"w":232,"h":79},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":232,"h":79},
+	"sourceSize": {"w":232,"h":79}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "spinButton.png",
+	"format": "RGBA8888",
+	"size": {"w":936,"h":81},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:939b9175b5471056b620ef90e6ce2c38:532cb58f4a4bde008df57933cd4b52ed:95955d9207853349974d1bd7c4363849$"
+}
+}

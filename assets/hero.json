@@ -1,172 +1,68 @@
 {"frames": {
 
-"man-part-feet-standing-alt.png":
+"man-frowning-shrugging.png":
 {
-	"frame": {"x":1844,"y":1,"w":94,"h":86},
+	"frame": {"x":1,"y":874,"w":189,"h":289},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":94,"h":86},
-	"sourceSize": {"w":94,"h":86}
+	"spriteSourceSize": {"x":0,"y":0,"w":189,"h":289},
+	"sourceSize": {"w":189,"h":289}
 },
-"man-part-feet-standing-on-left-alt.png":
+"man-notimpressed-shrugging.png":
 {
-	"frame": {"x":1684,"y":1,"w":78,"h":87},
+	"frame": {"x":1,"y":1165,"w":189,"h":289},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":78,"h":87},
-	"sourceSize": {"w":78,"h":87}
+	"spriteSourceSize": {"x":0,"y":0,"w":189,"h":289},
+	"sourceSize": {"w":189,"h":289}
 },
-"man-part-feet-standing-on-left.png":
+"man-smiling-pointing.png":
 {
-	"frame": {"x":1430,"y":1,"w":84,"h":93},
+	"frame": {"x":1,"y":1,"w":200,"h":289},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":84,"h":93},
-	"sourceSize": {"w":84,"h":93}
+	"spriteSourceSize": {"x":0,"y":0,"w":200,"h":289},
+	"sourceSize": {"w":200,"h":289}
 },
-"man-part-feet-standing-on-right-alt.png":
+"man-smiling-thumbsup.png":
 {
-	"frame": {"x":1764,"y":1,"w":78,"h":87},
+	"frame": {"x":1,"y":1747,"w":177,"h":289},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":78,"h":87},
-	"sourceSize": {"w":78,"h":87}
+	"spriteSourceSize": {"x":0,"y":0,"w":177,"h":289},
+	"sourceSize": {"w":177,"h":289}
 },
-"man-part-feet-standing-on-right.png":
+"man-smiling-waving.png":
 {
-	"frame": {"x":1516,"y":1,"w":84,"h":93},
+	"frame": {"x":1,"y":583,"w":197,"h":289},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":84,"h":93},
-	"sourceSize": {"w":84,"h":93}
+	"spriteSourceSize": {"x":0,"y":0,"w":197,"h":289},
+	"sourceSize": {"w":197,"h":289}
 },
-"man-part-feet-standing.png":
+"man-surprised-pointing.png":
 {
-	"frame": {"x":1602,"y":1,"w":80,"h":89},
+	"frame": {"x":1,"y":292,"w":200,"h":289},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":89},
-	"sourceSize": {"w":80,"h":89}
+	"spriteSourceSize": {"x":0,"y":0,"w":200,"h":289},
+	"sourceSize": {"w":200,"h":289}
 },
-"man-part-hand-dunno-left.png":
+"man-surprised-shrugging.png":
 {
-	"frame": {"x":1430,"y":96,"w":70,"h":56},
+	"frame": {"x":1,"y":1456,"w":189,"h":289},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":70,"h":56},
-	"sourceSize": {"w":70,"h":56}
-},
-"man-part-hand-raised-left.png":
-{
-	"frame": {"x":1940,"y":1,"w":70,"h":84},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":70,"h":84},
-	"sourceSize": {"w":70,"h":84}
-},
-"man-part-hand-thumbsup-left.png":
-{
-	"frame": {"x":1940,"y":87,"w":60,"h":70},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":60,"h":70},
-	"sourceSize": {"w":60,"h":70}
-},
-"man-part-head-angry-closed-eyes.png":
-{
-	"frame": {"x":133,"y":1,"w":129,"h":151},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":129,"h":151},
-	"sourceSize": {"w":129,"h":151}
-},
-"man-part-head-angry-open-eyes.png":
-{
-	"frame": {"x":919,"y":1,"w":126,"h":151},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":126,"h":151},
-	"sourceSize": {"w":126,"h":151}
-},
-"man-part-head-cool.png":
-{
-	"frame": {"x":264,"y":1,"w":129,"h":151},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":129,"h":151},
-	"sourceSize": {"w":129,"h":151}
-},
-"man-part-head-laughing-closed-eyes.png":
-{
-	"frame": {"x":1303,"y":1,"w":125,"h":147},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":125,"h":147},
-	"sourceSize": {"w":125,"h":147}
-},
-"man-part-head-laughing-open-eyes.png":
-{
-	"frame": {"x":395,"y":1,"w":129,"h":151},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":129,"h":151},
-	"sourceSize": {"w":129,"h":151}
-},
-"man-part-head-notimpressed.png":
-{
-	"frame": {"x":526,"y":1,"w":129,"h":151},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":129,"h":151},
-	"sourceSize": {"w":129,"h":151}
-},
-"man-part-head-sad-alt.png":
-{
-	"frame": {"x":657,"y":1,"w":129,"h":151},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":129,"h":151},
-	"sourceSize": {"w":129,"h":151}
-},
-"man-part-head-sad.png":
-{
-	"frame": {"x":788,"y":1,"w":129,"h":151},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":129,"h":151},
-	"sourceSize": {"w":129,"h":151}
-},
-"man-part-head-smiling-teeth-open-eyes.png":
-{
-	"frame": {"x":1047,"y":1,"w":126,"h":151},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":126,"h":151},
-	"sourceSize": {"w":126,"h":151}
-},
-"man-part-head-surprised.png":
-{
-	"frame": {"x":1175,"y":1,"w":126,"h":151},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":126,"h":151},
-	"sourceSize": {"w":126,"h":151}
-},
-"man-part-torso.png":
-{
-	"frame": {"x":1,"y":1,"w":130,"h":151},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":130,"h":151},
-	"sourceSize": {"w":130,"h":151}
+	"spriteSourceSize": {"x":0,"y":0,"w":189,"h":289},
+	"sourceSize": {"w":189,"h":289}
 }},
 "meta": {
 	"app": "http://www.codeandweb.com/texturepacker",
 	"version": "1.0",
-	"image": "man-parts.png",
+	"image": "man.png",
 	"format": "RGBA8888",
-	"size": {"w":2011,"h":158},
+	"size": {"w":202,"h":2037},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:642a53d09d152dffeecaa77ec4df6261:6280e647312215bb46f0cc263ad57f30:b86f6df52477e829bfb4dd1e6591cdbb$"
+	"smartupdate": "$TexturePacker:SmartUpdate:3b87f342f8cac5a1bebe72c85438018c:3aea90b289ca0d8ade662aee27893227:7cb16ae2a7812a83bde2d0f7d63f713f$"
 }
 }
