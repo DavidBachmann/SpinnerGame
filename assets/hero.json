@@ -1,68 +1,116 @@
 {"frames": {
 
-"man-frowning-shrugging.png":
+"man-angry-pointing.png":
 {
-	"frame": {"x":1,"y":874,"w":189,"h":289},
+	"frame": {"x":1,"y":579,"w":198,"h":286},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":189,"h":289},
-	"sourceSize": {"w":189,"h":289}
+	"spriteSourceSize": {"x":0,"y":0,"w":198,"h":286},
+	"sourceSize": {"w":198,"h":286}
+},
+"man-angry-waving.png":
+{
+	"frame": {"x":201,"y":290,"w":183,"h":286},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":183,"h":286},
+	"sourceSize": {"w":183,"h":286}
+},
+"man-frowning-shrugging.png":
+{
+	"frame": {"x":190,"y":1444,"w":187,"h":286},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":187,"h":286},
+	"sourceSize": {"w":187,"h":286}
+},
+"man-laughing-pointing.png":
+{
+	"frame": {"x":1,"y":867,"w":198,"h":286},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":198,"h":286},
+	"sourceSize": {"w":198,"h":286}
+},
+"man-laughing-thumbsup.png":
+{
+	"frame": {"x":190,"y":1732,"w":174,"h":286},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":174,"h":286},
+	"sourceSize": {"w":174,"h":286}
+},
+"man-laughing-waving.png":
+{
+	"frame": {"x":201,"y":578,"w":183,"h":286},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":183,"h":286},
+	"sourceSize": {"w":183,"h":286}
 },
 "man-notimpressed-shrugging.png":
 {
-	"frame": {"x":1,"y":1165,"w":189,"h":289},
+	"frame": {"x":1,"y":1155,"w":187,"h":287},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":189,"h":289},
-	"sourceSize": {"w":189,"h":289}
+	"spriteSourceSize": {"x":0,"y":0,"w":187,"h":287},
+	"sourceSize": {"w":187,"h":287}
 },
 "man-smiling-pointing.png":
 {
-	"frame": {"x":1,"y":1,"w":200,"h":289},
+	"frame": {"x":1,"y":1,"w":198,"h":287},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":200,"h":289},
-	"sourceSize": {"w":200,"h":289}
+	"spriteSourceSize": {"x":0,"y":0,"w":198,"h":287},
+	"sourceSize": {"w":198,"h":287}
+},
+"man-smiling-shrugging.png":
+{
+	"frame": {"x":190,"y":1155,"w":187,"h":287},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":187,"h":287},
+	"sourceSize": {"w":187,"h":287}
 },
 "man-smiling-thumbsup.png":
 {
-	"frame": {"x":1,"y":1747,"w":177,"h":289},
+	"frame": {"x":201,"y":866,"w":174,"h":287},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":177,"h":289},
-	"sourceSize": {"w":177,"h":289}
+	"spriteSourceSize": {"x":0,"y":0,"w":174,"h":287},
+	"sourceSize": {"w":174,"h":287}
 },
 "man-smiling-waving.png":
 {
-	"frame": {"x":1,"y":583,"w":197,"h":289},
+	"frame": {"x":201,"y":1,"w":183,"h":287},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":197,"h":289},
-	"sourceSize": {"w":197,"h":289}
+	"spriteSourceSize": {"x":0,"y":0,"w":183,"h":287},
+	"sourceSize": {"w":183,"h":287}
 },
 "man-surprised-pointing.png":
 {
-	"frame": {"x":1,"y":292,"w":200,"h":289},
+	"frame": {"x":1,"y":290,"w":198,"h":287},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":200,"h":289},
-	"sourceSize": {"w":200,"h":289}
+	"spriteSourceSize": {"x":0,"y":0,"w":198,"h":287},
+	"sourceSize": {"w":198,"h":287}
 },
 "man-surprised-shrugging.png":
 {
-	"frame": {"x":1,"y":1456,"w":189,"h":289},
+	"frame": {"x":1,"y":1444,"w":187,"h":287},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":189,"h":289},
-	"sourceSize": {"w":189,"h":289}
+	"spriteSourceSize": {"x":0,"y":0,"w":187,"h":287},
+	"sourceSize": {"w":187,"h":287}
 }},
 "meta": {
 	"app": "http://www.codeandweb.com/texturepacker",
 	"version": "1.0",
-	"image": "man.png",
+	"image": "hero.png",
 	"format": "RGBA8888",
-	"size": {"w":202,"h":2037},
+	"size": {"w":385,"h":2019},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:3b87f342f8cac5a1bebe72c85438018c:3aea90b289ca0d8ade662aee27893227:7cb16ae2a7812a83bde2d0f7d63f713f$"
+	"smartupdate": "$TexturePacker:SmartUpdate:c82681ff624e6e10f447950ff8464b3e:dec4e6c8427992d6e09d4638d6e72d60:eec64b416d3f54b5cb5181ef71d8f236$"
 }
 }

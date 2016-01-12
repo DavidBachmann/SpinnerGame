@@ -6,6 +6,7 @@ function Preload() {
 
 Preload.prototype = {
   preload: function() {
+    this.game.time.advancedTiming = true;
     this.asset = this.add.sprite(this.game.width/2,this.game.height/2, 'preloader');
     this.asset.anchor.setTo(0.5, 0.5);
     this.load.onLoadComplete.addOnce(this.onLoadComplete, this);
@@ -17,7 +18,6 @@ Preload.prototype = {
     this.load.image('wheelCenter', 'assets/WOF-center.png');
     this.load.image('wheelColors', 'assets/WOF-colors_w-pictures.png');
     this.load.image('wheelFrame', 'assets/WOF-frame.png');
-    this.load.image('wheelLighting', 'assets/WOF-lighting.png');
     this.load.image('wheelStand', 'assets/WOF-stand.png');
     this.load.image('wheelNeedle', 'assets/WOF-needle.png');
     this.load.image('wheelTop', 'assets/WOF-top.png');
