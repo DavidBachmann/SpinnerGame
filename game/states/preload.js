@@ -15,6 +15,8 @@ Preload.prototype = {
     this.load.image('background', 'assets/WOF-background.png');
     this.load.image('sky', 'assets/WOF-sky.png');
     this.load.image('clouds', 'assets/WOF-clouds.png');
+    this.load.image('piano', 'assets/WOF-piano.png');
+    this.load.image('pianoShadow', 'assets/pianoShadow.png');
     this.load.image('wheelCenter', 'assets/WOF-center.png');
     this.load.image('wheelColors', 'assets/WOF-colors_w-pictures.png');
     this.load.image('wheelFrame', 'assets/WOF-frame.png');

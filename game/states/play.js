@@ -1,6 +1,5 @@
   'use strict';
   var _ = require('underscore');
-  var gsap = require('gsap');
 
   function Play() {
     this.canClickWheel = true;
@@ -21,6 +20,13 @@
       this.clouds.autoScroll(-10, 0);
       this.background = this.game.add.sprite(0,0,'background');
 
+      // Creating the Piano (death animation)
+      this.pianoShadow = this.game.add.sprite(480,455,'pianoShadow');
+      this.pianoShadow.scale.setTo(0,0);
+      this.pianoShadow.opacity = 0;
+      this.pianoShadow.anchor.setTo(0.5, 0);
+      this.piano = this.game.add.sprite(320,-500,'piano');
+      this.piano.scale.setTo(0.8);
 
       // Creating the wheel from multiple parts.
       this.wheelGroup = this.game.add.group();
@@ -33,7 +39,7 @@
       this.wheelColors = this.wheelGroup.create(650, 300, 'wheelColors');
       this.wheelColors.anchor.setTo(0.5, 0.5);
       this.game.physics.enable(this.wheelColors, Phaser.Physics.ARCADE);
-      
+
       this.wheelFrame = this.wheelGroup.create(650, 300, 'wheelFrame');
       this.wheelFrame.anchor.setTo(0.5, 0.5);
       this.game.physics.enable(this.wheelFrame, Phaser.Physics.ARCADE);
@@ -59,7 +65,7 @@
       this.wheelColors.body.angularDrag = 200;
 
       // Create out hero
-      this.hero = this.game.add.sprite(400,250, 'hero', 10);
+      this.hero = this.game.add.sprite(420,250, 'hero', 10);
       this.hero.scale.setTo(0.8);
       this.hero.animations.add('hero-angry-pointing', [0]);
       this.hero.animations.add('hero-angry-waving', [1]);
@@ -75,25 +81,7 @@
       this.hero.animations.add('hero-surprised-pointing', [11]);
       this.hero.animations.add('hero-surprised-shrugging', [12]);
 
-      // // Create the spin button
-      // this.spinButton = this.game.add.sprite(30,460, 'spinButton', 1);
-      // this.spinButton.animations.add('buttonDefault', [1]);
-      // this.spinButton.animations.add('buttonPressed', [0]);
-      // this.spinButton.animations.add('buttonStop', [3]);
-      // this.spinButton.animations.add('buttonStopPressed', [2]);
-
-      // // Make the button object accept inputs and make that input trigger wheelHandler();
-      // this.spinButton.inputEnabled = true;
-      // this.spinButton.events.onInputDown.add(this.wheelHandler, this);
-
-
-      // Create tween animations (with GSAP)
-      //var heroTimeline = new TimelineLite();
-
-      //heroTimeline.fromTo(this.heroHandLeft, 2, {rotation: 0},{rotation: 0.5, repeat: -1, yoyo: true, repeatDelay: 0.1, ease: Power1.easeInOut});
-
-
-      this.resetState();
+      this.camera.x = 216;
     },
 
     update: function() {
@@ -128,7 +116,6 @@
     },
 
     spinWheel: function() {
-
       this.wheelFrame.body.angularAcceleration = -250;
       this.wheelCenter.body.angularAcceleration = 250;
       this.wheelColors.body.angularAcceleration = -15;
@@ -136,7 +123,7 @@
       this.canClickWheel = false;
 
       // User can't stop wheel until after X ms, so it can build momentum
-      this.game.time.events.add(4000, this.makeWheelClickable, this);
+      this.game.time.events.add(1000, this.makeWheelClickable, this);
     },
 
     stopWheel: function() {
@@ -147,9 +134,9 @@
       this.canClickWheel = false;
       this.hero.animations.play('hero-surprised-pointing');
       //this.spinButton.animations.play('buttonStopPressed');
+      this.game.time.events.add(1000, this.checkIfWon, this);
+      console.log("checked");
 
-      // The player can't click the wheel until 4 seconds has passed.
-      this.game.time.events.add(5000, this.resetState, this);
     },
 
     makeWheelClickable: function() {
@@ -158,12 +145,43 @@
       this.hero.animations.play('hero-smiling-pointing');
     },
 
+    checkIfWon: function() {
+      this.chance = Phaser.Utils.chanceRoll();
+      console.log(this.chance);
+      if (this.chance) {
+        this.deathAnimation();
+        //this.game.time.events.add(5000, this.resetState, this);
+      } 
+      else {
+        this.deathAnimation();
+      }
+    },
+
+    deathAnimation: function() {
+      this.game.time.events.add(800, function(){
+        this.triggerPiano = this.game.add.tween(this.piano.position)
+        .to( { y: 220 }, 400, "Linear", true);
+      }, this);
+
+    this.game.add.tween(this.pianoShadow.scale)
+    .to({x: 0.6, y: 0.6}, 1000, "Linear", true);
+
+    this.game.add.tween(this.pianoShadow)
+    .to({ opacity: 1}, 1000, "Linear", true)
+    .onComplete.addOnce(function(){
+      this.pianoShadow.kill();
+      this.hero.kill();
+      this.game.time.events.add(2000, this.resetState, this);
+   }, this);
+
+    },
+
     resetState: function() {
       this.hero.animations.play('hero-smiling-waving');
-      //this.spinButton.animations.play('buttonDefault');
       this.canClickWheel = true;
       this.camera.x = 216;
-    }
+    },
+
 
   };
   
