@@ -1,97 +1,83 @@
-// Generated on 2014-03-28 using generator-phaser-official 0.0.8-rc-2
-'use strict';
-var config = require('./config.json');
-var _ = require('underscore');
-_.str = require('underscore.string');
+var livereloadPort = 9090;
+var lrSnippet = require('connect-livereload')({port: livereloadPort});
 
-// Mix in non-conflict functions to Underscore namespace if you want
-_.mixin(_.str.exports());
+module.exports = function(grunt){
 
-var LIVERELOAD_PORT = 35728;
-var lrSnippet = require('connect-livereload')({port: LIVERELOAD_PORT});
-var mountFolder = function (connect, dir) {
-  return connect.static(require('path').resolve(dir));
-};
- 
-module.exports = function (grunt) {
-  // load all grunt tasks
-  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
- 
+  // Project configuration.
   grunt.initConfig({
-    watch: {
-      scripts: {
-        files: [
-            'game/**/*.js',
-            '!game/main.js'
-        ],
-        options: {
-          spawn: false,
-          livereload: LIVERELOAD_PORT
-        },
-        tasks: ['build']
+    pkg: grunt.file.readJSON('package.json'),
+
+    dist_dir: 'game/',
+
+    gamejs: [
+      'js/states/boot.js',
+   	  'js/states/load.js',
+   	  'js/states/menu.js',
+   	  'js/states/play.js',
+      'js/prefabs/*.js',
+   	  'js/game.js',
+    ],
+
+    concat: {
+      gamejs: {
+      	src: ['<%= gamejs %>'],
+        dest: '<%= dist_dir %>/js/game.js'
       }
     },
-    connect: {
-      options: {
-        port: 9000,
-        // change this to '0.0.0.0' to access the server from outside
-        hostname: 'localhost'
-      },
-      livereload: {
+
+    uglify: {
+      gamejs: {
+      	src: ['<%= gamejs %>'],
+      	dest: '<%= dist_dir %>/js/game.min.js'
+      }
+    },
+
+    copy: {
+      main: {
+      	files: [
+      	  {expand: true, cwd: 'assets/', src: ['**'], dest: '<%= dist_dir %>/assets/'},
+      	  {src: ['img/**'], dest: '<%= dist_dir %>/'},
+      	  {expand: true, flatten: true, src: ['js/lib/phaser.min.js'], dest: '<%= dist_dir %>/js/'},
+      	  {expand: true, src: ['index.html'], dest: 'game'}
+      	]
+      }
+    },
+
+    watch: {
+      js: {
+        files: ['js/*.js', 'js/**/*.js'],
+        tasks: ['concat', 'uglify'],
         options: {
+          livereload: livereloadPort
+        }
+      }
+    },
+
+    connect: {
+      server: {
+        options: {
+          port: 3000,
+          livereload: livereloadPort,
           middleware: function (connect) {
             return [
               lrSnippet,
-              mountFolder(connect, 'dist')
+              connect.static(require('path').resolve('game'))
             ];
           }
         }
       }
-    },
-    open: {
-      server: {
-        path: 'http://localhost:9000'
-      }
-    },
-    copy: {
-      dist: {
-        files: [
-          // includes files within path and its sub-directories
-          { expand: true, src: ['assets/**'], dest: 'dist/' },
-          { expand: true, flatten: true, src: ['game/plugins/*.js'], dest: 'dist/js/plugins/' },
-          { expand: true, flatten: true, src: ['bower_components/**/build/*.js'], dest: 'dist/js/' },
-          { expand: true, src: ['css/**'], dest: 'dist/' },
-          { expand: true, src: ['index.html'], dest: 'dist/' }
-        ]
-      }
-    },
-    browserify: {
-      build: {
-        src: ['game/main.js'],
-        dest: 'dist/js/game.js'
-      }
     }
+    
   });
-  
-  grunt.registerTask('build', ['buildBootstrapper', 'browserify','copy']);
-  grunt.registerTask('serve', ['build', 'connect:livereload', 'open', 'watch']);
-  grunt.registerTask('default', ['serve']);
-  grunt.registerTask('prod', ['build', 'copy']);
 
-  grunt.registerTask('buildBootstrapper', 'builds the bootstrapper file correctly', function() {
-    var stateFiles = grunt.file.expand('game/states/*.js');
-    var gameStates = [];
-    var statePattern = new RegExp(/(\w+).js$/);
-    stateFiles.forEach(function(file) {
-      var state = file.match(statePattern)[1];
-      if (!!state) {
-        gameStates.push({shortName: state, stateName: _.capitalize(state) + 'State'});
-      }
-    });
-    config.gameStates = gameStates;
-    console.log(config);
-    var bootstrapper = grunt.file.read('templates/_main.js.tpl');
-    bootstrapper = grunt.template.process(bootstrapper,{data: config});
-    grunt.file.write('game/main.js', bootstrapper);
-  });
+  // Load modules
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-connect');
+  //grunt.loadNpmTasks('grunt-open');
+
+  // Taks
+  grunt.registerTask('default', ['copy', 'concat', 'uglify', 'connect', 'watch']);
 };

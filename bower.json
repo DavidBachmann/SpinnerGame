@@ -1,7 +1,0 @@
-{
-  "name": "spinner",
-  "version": "0.0.0",
-  "dependencies": {
-    "phaser-official": "2.4.4"
-  }
-}

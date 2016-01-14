@@ -1,16 +1,13 @@
-'use strict';
-function Preload() {
+Game.States.Preloader = function(game) {
   this.asset = null;
   this.ready = false;
-}
+};
 
-Preload.prototype = {
+Game.States.Preloader.prototype = {
+
   preload: function() {
     this.game.time.advancedTiming = true;
-    this.asset = this.add.sprite(this.game.width/2,this.game.height/2, 'preloader');
-    this.asset.anchor.setTo(0.5, 0.5);
     this.load.onLoadComplete.addOnce(this.onLoadComplete, this);
-    this.load.setPreloadSprite(this.asset);
     this.load.atlas('hero', 'assets/hero.png', 'assets/hero.json');
     this.load.image('background', 'assets/WOF-background.png');
     this.load.image('sky', 'assets/WOF-sky.png');
@@ -26,21 +23,22 @@ Preload.prototype = {
     this.load.image('leverBase', 'assets/WOF-lever-base.png');
     this.load.image('leverHandle', 'assets/WOF-lever-handle.png');
     this.load.atlas('spinButton', 'assets/spinButton.png', 'assets/spinButton.json');
+    this.load.image('youWin', 'assets/you-win-text.png');
+    this.load.image('youLose', 'assets/you-lost-text.png');
   },
 
-  create: function() {
-    this.asset.cropEnabled = false;
-  },
+ create: function() {
+
+ },
 
   update: function() {
-    if(!!this.ready) {
-      this.game.state.start('play');
+    if(this.ready) {
+       this.game.state.start('Play');
     }
   },
 
   onLoadComplete: function() {
     this.ready = true;
   }
-};
 
-module.exports = Preload;
+};
