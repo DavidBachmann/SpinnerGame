@@ -4,7 +4,8 @@ var Game = {
   Prefabs: {}
 };
 
-Game.States.Boot = function(game){};
+Game.States.Boot = function(game){
+};
 
 Game.States.Boot.prototype = {
   create: function(){

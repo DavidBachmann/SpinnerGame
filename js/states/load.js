@@ -17,6 +17,7 @@ Game.States.Preloader.prototype = {
     this.load.image('wheelCenter', 'assets/WOF-center.png');
     this.load.image('wheelColors', 'assets/WOF-colors_w-pictures.png');
     this.load.image('wheelFrame', 'assets/WOF-frame.png');
+    this.load.image('wheelFrameGlow', 'assets/WOF-frameglow.png');
     this.load.image('wheelStand', 'assets/WOF-stand.png');
     this.load.image('wheelNeedle', 'assets/WOF-needle.png');
     this.load.image('wheelTop', 'assets/WOF-top.png');
