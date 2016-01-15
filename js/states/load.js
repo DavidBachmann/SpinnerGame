@@ -22,9 +22,8 @@ Game.States.Preloader.prototype = {
     this.load.image('wheelTop', 'assets/WOF-top.png');
     this.load.image('leverBase', 'assets/WOF-lever-base.png');
     this.load.image('leverHandle', 'assets/WOF-lever-handle.png');
+    this.load.image('airBalloon', 'assets/WOF-air-balloon.png');
     this.load.atlas('spinButton', 'assets/spinButton.png', 'assets/spinButton.json');
-    this.load.image('youWin', 'assets/you-win-text.png');
-    this.load.image('youLose', 'assets/you-lost-text.png');
   },
 
  create: function() {
